@@ -28,14 +28,14 @@ import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.subjects.BehaviorSubject;
 
+import static androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP;
 import static androidx.lifecycle.Lifecycle.Event.ON_CREATE;
 import static androidx.lifecycle.Lifecycle.Event.ON_DESTROY;
 import static androidx.lifecycle.Lifecycle.Event.ON_RESUME;
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
-import static androidx.annotation.RestrictTo.Scope.LIBRARY;
 import static com.uber.autodispose.android.internal.AutoDisposeAndroidUtil.isMainThread;
 
-@RestrictTo(LIBRARY)
+@RestrictTo(LIBRARY_GROUP)
 class LifecycleEventsObservable extends Observable<Event> {
 
   private final Lifecycle lifecycle;
